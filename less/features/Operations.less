@@ -1,0 +1,17 @@
+@a: 5px;
+@b: 10mm;
+@c: 3cm;
+
+@d: @a + @b - @c;
+
+@base: 5%;
+@filter: @base * 2;
+@other: @base + @filter;
+
+@color: #333 + #111 / 2;
+
+.temp{
+    width: @d;
+    height: @other;
+    color: @color;
+}

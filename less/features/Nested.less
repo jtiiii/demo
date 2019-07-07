@@ -1,0 +1,46 @@
+/* 普通css嵌套 */
+#header{
+    color: black;
+    .navigator{
+        font-size: 18px;
+    }
+    .logo{
+        width: 300px;
+        height: 100px;
+    }
+    &:hover{
+        opacity: .7;
+    }
+}
+
+/*
+    media 嵌套
+    同样适用于：@supports 和 @document
+*/
+@media screen {
+    .screen-position{
+        position: relative;
+    }
+    
+    @media (max-width: 480px) {
+        .screen-position{
+            position: absolute;
+        }
+    }
+
+    @media tv{
+        .screen-position{
+            position: static;
+        }
+    }
+}
+
+/* 对于 font-face 和 keyframes 则嵌套没有效果*/
+#a{
+    color: blue;
+    @font-face {
+        font-family: 'test';
+        src: 'test.ttf';
+    }
+    padding: 20px;
+}

@@ -1,0 +1,32 @@
+.b{
+    &:hover{
+        opacity: .7;
+    }
+    color: #99ccff;
+}
+.a{
+    &:extend(.b);
+    background: red;
+}
+//.c 的继承跟 .a 使用的是一样效果
+.c:extend(.b){
+    background: green; 
+}
+
+//使用all 来继承伪类属性（如:hover）
+.d:extend(.b all){
+    font-size: 20px;
+}
+
+//使用”,“可以多重继承
+.e:extend(.a, .d){
+    border: 2px solid #eee;
+}
+
+.dd.a{
+    color: #eee;
+}
+
+.cc:extend(.dd){
+    font-size: 18px;
+}

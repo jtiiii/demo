@@ -1,0 +1,17 @@
+.link{
+    &:hover{
+        opacity: .7%;
+    }
+    color: red;
+}
+
+.website-link{
+    //该类继承自.link的样式
+    &:extend(.link);
+    background-color: #99ccff;
+}
+
+.video-link{
+    .link;
+    border: 1px solid green;
+}

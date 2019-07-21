@@ -1,0 +1,17 @@
+.a.test{
+    font-size: 16px;
+}
+
+.test{
+    &:hover{
+        color: #99ccff;
+    }
+}
+
+.link > .test{
+    background: #fff;
+}
+
+//all 能匹配上述所有带.test的选择器
+.output:extend(.test all){}
+

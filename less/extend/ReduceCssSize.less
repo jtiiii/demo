@@ -1,0 +1,18 @@
+.my-inline-block {
+    display: inline-block;
+    font-size: 0;
+}
+//这里使用Mixins,则作为独立的类，每个都重复生成一套完整的css
+.thing1 {
+    .my-inline-block;
+}
+.thing2 {
+    .my-inline-block;
+}
+//使用extend，会把相同属性写在一起, 会比上述写法更节省空间
+.thing1-2 {
+    &:extend(.my-inline-block);
+}
+.thing2-2 {
+    &:extend(.my-inline-block);
+}

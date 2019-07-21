@@ -1,0 +1,5 @@
+.bucket,.pocket{
+    font-size: 16px;
+}
+//test 继承了 .bucket 和 .pocket 的重复内容，输出则会出现重名现象
+.test:extend(.bucket, .pocket){}

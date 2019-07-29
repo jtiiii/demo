@@ -1,0 +1,18 @@
+.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000){
+    //使用arguments传参可以一次性按照顺序传递所有参数
+    box-shadow: @arguments;
+}
+//使用 ... 可以一次性声明多个参数
+.border(...){
+    border: @arguments;
+}
+//使用 @rest... 可以声明剩余参数
+.background(@image; @rest... ){
+    background: @rest;
+    background-image: @image;
+}
+.test{
+    .box-shadow(2px, 3px);
+    .border( 1px; solid; #000);
+    .background(url('./image/logo.jpg'); #fff; fixed; top);
+}

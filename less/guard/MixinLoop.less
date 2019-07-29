@@ -1,0 +1,8 @@
+.loop(@counter) when (@counter > 0) {
+    .loop((@counter - 1)); //自己调用自己，采用递归的方式实现循环
+    width: (10px * @counter);
+}
+
+div {
+    .loop(5);
+}

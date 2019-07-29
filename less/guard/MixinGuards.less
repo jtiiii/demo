@@ -1,0 +1,14 @@
+//使用when可以进行条件编译
+.mixin (@a) when (lightness(@a) >= 50%) {
+    background-color: black;
+}
+//可以多次声明编译
+.mixin (@a) when (lightness(@a) < 50%) {
+    background-color: white;
+}
+.mixin (@a) {
+    color: @a;
+}
+
+.class1{ .mixin(#ddd); }
+.class2{ .mixin(#555); }

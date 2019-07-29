@@ -1,0 +1,22 @@
+//使用 + 则会以 , 为分隔符
+.box-shadow1(){
+    box-shadow+: inset 0 0 10px #555;
+}
+.box-shadow2(){
+    box-shadow+: 0 0 20px black;
+}
+//使用 +_ 则会 以 [空格] 作为分割符
+.transform1(){
+    transform+_: scale(2);
+}
+.transform2(){
+    transform+_: rotate(15deg);
+}
+
+.test{
+    .box-shadow1();
+    .box-shadow2();
+
+    .transform1();
+    .transform2();
+}

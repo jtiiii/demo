@@ -1,0 +1,16 @@
+#outer(){
+    .inner{
+        border: 1px solid #000;
+    }
+    font-size: 20px;
+}
+
+.test{
+    //如果只引用的话，可以使用css的选择器写法
+    #outer > .inner;
+    //当然 [空格] 和 > 都是可以省略的，以下写法都具有相同效果
+    // #outer .inner;
+    // #outer.inner;
+    // #outer .inner();
+    // #outer.inner();
+}

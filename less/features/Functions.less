@@ -1,8 +1,0 @@
-@base: #f04615;
-@width: 0.5;
-
-.class{
-    width: percentage(@width); /* 转换成百分比 */
-    color: saturate(@base, 5%); /*  增加 5% 的饱和度 */
-    background-color: spin(lighten(@base, 25%), 8); /*  增加25%的颜色亮度，再反转8度颜色（PS，我也不是很明白这个反转逻辑） */
-}

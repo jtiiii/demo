@@ -1,7 +1,0 @@
-@bucket: .bucket;
-@{bucket} { // 变量的选择器
-  color: blue;
-}
-.some-class:extend(.bucket) {} // 这里是正确的使用extend
-
-.some-class-x:extend(@{bucket}){} // 这里无法正确匹配，.some-class-x 不会被编译输出

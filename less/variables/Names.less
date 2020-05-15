@@ -1,8 +1,0 @@
-@fnord:  "I am fnord.";
-@var:    "fnord";
-
-.temp{
-    //因为@var是 fnord, 因此 @@var 会成为两次引用
-    //@@var => @fnord => I am fnord.
-    content: @@var;
-}

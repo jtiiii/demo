@@ -1,24 +1,16 @@
 package cn.funeralobjects.demo.jpa;
 
 import cn.funeralobjects.demo.jpa.entity.Company;
-import cn.funeralobjects.demo.jpa.entity.CompanyAffiliation;
-import cn.funeralobjects.demo.jpa.entity.CompanyAffiliationPk;
-import cn.funeralobjects.demo.jpa.entity.CompanyPath;
 import cn.funeralobjects.demo.jpa.repository.CompanyAffiliationRepository;
 import cn.funeralobjects.demo.jpa.repository.CompanyPathRepository;
 import cn.funeralobjects.demo.jpa.repository.CompanyRepository;
 import cn.funeralobjects.demo.jpa.service.CompanyService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @author FuneralObjects
@@ -48,11 +40,11 @@ public class JpaTest {
     }
 
     @Test
-    public void findTest(){
+    public void findTest() {
         companyRepository.findFirstByName("tencent")
-                .map( tencent -> companyAffiliationRepository.findAllByPk_PaternalId(tencent.getId()))
-                .ifPresent( paternals -> {
-                    paternals.forEach(affiliation -> System.out.println(affiliation.getCompany().getName()) );
+                .map(tencent -> companyAffiliationRepository.findAllByPk_PaternalId(tencent.getId()))
+                .ifPresent(paternals -> {
+                    paternals.forEach(affiliation -> System.out.println(affiliation.getCompany().getName()));
                 });
     }
 

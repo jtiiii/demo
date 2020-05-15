@@ -3,7 +3,6 @@ package cn.funeralobjects.demo.jpa.entity;
 import cn.funeralobjects.demo.jpa.converter.PathConverter;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.springframework.data.jpa.repository.EntityGraph;
 
 import javax.persistence.*;
 import java.io.Serializable;

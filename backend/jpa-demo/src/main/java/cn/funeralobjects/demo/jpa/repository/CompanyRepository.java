@@ -9,7 +9,7 @@ import java.util.Optional;
  * @author FuneralObjects
  * Create date: 2020/5/14 2:32 PM
  */
-public interface CompanyRepository extends JpaRepository<Company,Integer> {
+public interface CompanyRepository extends JpaRepository<Company, Integer> {
 
     Optional<Company> findFirstByName(String name);
 }

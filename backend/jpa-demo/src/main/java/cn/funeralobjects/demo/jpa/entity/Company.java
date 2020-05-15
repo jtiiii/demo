@@ -4,8 +4,6 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author FuneralObjects
@@ -20,7 +18,7 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(unique = true,length = 40, nullable = false)
+    @Column(unique = true, length = 40, nullable = false)
     private String name;
     @Column(length = 11, nullable = false)
     private Integer parentId;

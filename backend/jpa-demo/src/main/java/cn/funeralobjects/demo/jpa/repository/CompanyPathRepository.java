@@ -9,13 +9,12 @@ import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author FuneralObjects
  * Create date: 2020/5/14 2:36 PM
  */
-public interface CompanyPathRepository extends JpaRepository<CompanyPath,Integer> {
+public interface CompanyPathRepository extends JpaRepository<CompanyPath, Integer> {
 
     @Override
     @EntityGraph("CompanyPath.withCompany")

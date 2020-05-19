@@ -66,5 +66,10 @@ public class CompanyService {
         companyAffiliationRepository.saveAll(affiliations);
     }
 
+    public void findTest(Integer id) {
+        companyRepository.findById(id);
+        companyRepository.findById(id);
+    }
+
 
 }
